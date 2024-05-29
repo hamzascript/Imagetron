@@ -11,7 +11,7 @@ async function interactionCreate(client) {
         }
     
         try {
-            await command.execute(itneraction);
+            await command.execute(interaction);
         } catch (error) {
             console.error(error);
             if (interaction.replied || interaction.deferred) {

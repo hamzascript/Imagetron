@@ -4,7 +4,6 @@ const path = require('node:path')
 const { Client, Collection, Events, GatewayIntentBits} = require('discord.js')
 const { CommandKit } = require('commandkit')
 const { token } = require('./config.json')
-const { run } = require('./Web/index')
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] })
 
 new CommandKit({
@@ -16,7 +15,6 @@ new CommandKit({
 
 function load(){
     client.login(token)
-    run()
 }
 
 load()
