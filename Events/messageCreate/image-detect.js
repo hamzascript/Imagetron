@@ -1,4 +1,6 @@
 const axios = require('axios')
+const rapidAPIkey = require('../../config.json')
+
 module.exports = async (message, interaction, client, handler) => {
   const parametersList = ['EXPOSED_ANUS', 'EXPOSED_ARMPITS', 'COVERED_BELLY', 'EXPOSED_BELLY', 'COVERED_BUTTOCKS', 'EXPOSED_BUTTOCKS', 'FACE_F', 'FACE_M', 'COVERED_FEET', 'EXPOSED_FEET', 'COVERED_BREAST_F', 'EXPOSED_BREAST_F', 'COVERED_GENITALIA_F', 'EXPOSED_GENITALIA_F', 'EXPOSED_BREAST_M', 'EXPOSED_GENITALIA_M']
     try {
@@ -17,7 +19,7 @@ module.exports = async (message, interaction, client, handler) => {
             url: 'https://nsfw-images-detection-and-classification.p.rapidapi.com/adult-content',
             headers: {
                 'content-type': 'application/json',
-                'X-RapidAPI-Key': '4b5b89665fmshb1d37ce94074356p1037b8jsna948613faab9',
+                'X-RapidAPI-Key': rapidAPIkey,
                 'X-RapidAPI-Host': 'nsfw-images-detection-and-classification.p.rapidapi.com'
             },
             data: {
